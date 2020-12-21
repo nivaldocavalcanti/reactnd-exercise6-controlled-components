@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Item from './Item';
 
 class ListItems extends Component {
 
@@ -13,7 +14,7 @@ class ListItems extends Component {
             <div>
                 <p className="items">Items</p>
                 <ol className="item-list">
-                    {items.map((item, index) => <li key={index}>{item}</li>)}
+                    {items.map((item, index) => <Item key={index} item={item} />)}
                     {items.length === 0 && (
                         <p>No Items added to your list.</p>
                     )}
